@@ -1,0 +1,3 @@
+Public folder contains the assests which are shown to public or frontend so folders of css(styling) and img(images) 
+and js(java script) is made here.
+

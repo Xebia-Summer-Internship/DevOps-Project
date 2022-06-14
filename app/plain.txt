@@ -1,0 +1,5 @@
+In this app folder major backend part will come.
+config me configurations file hogi jaise hum authentication kre.
+http me request handle logic hoga
+models me database k sath interaction hoga 
+
