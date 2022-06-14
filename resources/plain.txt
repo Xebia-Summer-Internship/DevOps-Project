@@ -1,0 +1,6 @@
+resource folder me uncompile views or template honge jisko hum compile krke public folder me bjh sake 
+taki vo different version of browser pe compatible ho sake.
+
+saas ans js file hogi.
+
+views me html vala code hoga sara 
