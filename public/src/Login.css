@@ -1,4 +1,4 @@
-#forms{ 
+#forms1{ 
     padding-top: 30px;
     padding-bottom: 20px;
     width: 75%;
@@ -7,12 +7,12 @@
     opacity: 1;
     /* background-color: whitesmoke; */
 }
-form {
- top: 310px;
- left: 465px;
+.form1 {
+ top: 270px;
+ left: 620px;
  position: absolute;   
 }
-#forms .form-heading{
+#forms1 .form-heading{
         margin: 0px auto;
         color: black;
         text-align: center;
@@ -20,7 +20,7 @@ form {
         max-width: 600px;
         position: relative;
 }
-#forms .form-heading::before{
+#forms1 .form-heading::before{
     /* content: ""; */
     display: block;
     width: 130px;
@@ -28,7 +28,7 @@ form {
     background: black;
     /* position: absolute; */
 }
-#forms .form-heading::after{
+#forms1 .form-heading::after{
     /* content: ""; */
     display: block;
     width: 130px;
@@ -39,7 +39,7 @@ form {
     /* position: absolute; */
 }
 
-#forms .form input{
+#forms1 .form1 input{
     /* border: none; */
     border-bottom: 2px solid;
     border-color: transparent;
@@ -54,28 +54,18 @@ form {
 }
 
 
-#forms .form input:target{
+#forms1 .form1 input:target{
     border-color: transparent;
     border-bottom: 2px solid;
     text-align: center;
 }
-#forms .form #email{
-    margin-left: 30px;
-}
-#forms .form #confirmPassword{
-    margin-left: 30px;
-}
-#forms .form #DOB{
-    margin-left: 30px;
-    font-family: calibri;
-    color: grey;
-    font-size: 15px;
-}
-#forms .form input::placeholder{
+
+
+#forms1 .form1 input::placeholder{
     position: absolute;
     top: 10px;
 }
-#forms .form input::placeholder{
+#forms1 .form1 input::placeholder{
     font-family: calibri;
     font-size: 15px;
     /* font-weight: bolder; */
@@ -85,58 +75,29 @@ form {
     bottom: 2px;
     color: grey;
 }
-#forms .form button{
+#forms1 .form1 button{
     /* background-color: green; */
     border: 2px solid black;
     cursor: pointer;
     /* font-weight: bolder; */
     font-size: 20px;
     font-family: calibri;
-    margin-top: 30px;
+    margin-top: 20px;
     width: 310px;
     color: white;
     background-color: black;
     border-radius: 4px;
-    margin-left: 165px;
+    margin-left: 0px;
 }
-.form{
+.form1{
     margin-right: 100px;
 }
-#accountExists{
-    margin-left: 200px;
+#accountExists1{
+    margin-left: 40px;
     margin-top: 0px;
 }
-
-#Customer{
-    margin-left: 360px;
-    margin-top: 20px;
-    border: 2px solid black;
-    cursor: pointer;
-    /* font-weight: bolder; */
-    font-size: 20px;
-    font-family: calibri;
-    width: 210px;
-    color: white;
-    background-color: black;
-    border-radius: 4px;
-    
-}
-
-#Hotel {
-    margin-left: 30px;
-    margin-top: 20px;
-    border: 2px solid black;
-    cursor: pointer;
-    /* font-weight: bolder; */
-    font-size: 20px;
-    font-family: calibri;  
-    width: 210px;
-    color: black;
-    background-color: white;
-    border-radius: 4px;
-}
-
-#Hotel:hover {
-    color: white;
-    background-color: black;
+#forgot {
+    margin-left:180px;
+    position: absolute;
+    top:110px;
 }
