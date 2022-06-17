@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "description": "table reservation system",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react-scripts": "^5.0.1"
+  }
 }
