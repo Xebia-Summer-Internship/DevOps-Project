@@ -7,7 +7,7 @@ const HotelSchema = new Schema(
       type: String,
       required: true,
     },
-    Email: {
+    email: {
       type: String,
       required: true,
     },
