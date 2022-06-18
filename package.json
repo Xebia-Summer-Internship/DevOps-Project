@@ -8,14 +8,15 @@
     "start": "node back-end/server",
     "server": "nodemon back-end/server",
     "client": "npm start --prefix front-end",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "mongoose": "^6.3.8"
+    "mongoose": "^6.3.8",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "concurrently": "^7.2.2",
