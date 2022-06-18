@@ -6,7 +6,7 @@ const customerSchema = new Schema(
     name: {
       type: String,
     },
-    Email: {
+    email: {
       type: String,
     },
     phone: {
