@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const HotelSchema = new Schema(
+const hotelSchema = new Schema(
   {
     name: {
       type: String,
@@ -25,15 +25,15 @@ const HotelSchema = new Schema(
       required: true,
     },
     address: {
-        type:String,
-        required: true,
+      type: String,
+      required: true,
     },
     pincode: {
-        type: Number,
-        required: true,
+      type: Number,
+      required: true,
     },
-},
+  },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("hotel", HotelSchema);
+module.exports = mongoose.model("hotel", hotelSchema);
