@@ -63,23 +63,24 @@ const customerSignIn = async (req, res, next) => {
 };
 
 const fetchSignedInCustomer = async (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
-  
-    try {
-      const custm = await customer.findById(req.customer.id).select("-password");
-      console.log(custm);
-      return res.status(200).json({
-        message: "Customer fetched successfully",
-        customer: custm,
-      });
-    } catch (error) {
-      console.log(error);
-      return res.status(500).json({
-        message: "Error fetching customer",
-      });
-    }
-  };
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
+  try {
+    const custm = await customer.findById(req.customer.id).select("-password");
+    console.log(custm);
+    return res.status(200).json({
+      message: "Customer fetched successfully",
+      customer: custm,
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({
+      message: "Error fetching customer",
+    });
+  }
+};
+
 module.exports = { customerSignIn, fetchSignedInCustomer };

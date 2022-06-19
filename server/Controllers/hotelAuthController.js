@@ -2,6 +2,7 @@ const hotel = require("../models/hotelOwner");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
+//  Create a hotel account using: POST "api/hotelSignUp" : Doesn't rqequire authentication
 const hotelOwnerSignUp = async (req, res, next) => {
   const salt = await bcrypt.genSalt(10);
   const secPass = await bcrypt.hash(req.body.password, salt);

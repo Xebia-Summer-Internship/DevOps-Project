@@ -1,13 +1,14 @@
-const owner = require("../models/hotelOwner");
+const hotel = require("../models/hotelOwner");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { body, validationResult } = require("express-validator");
 
 // Login a registered customer : POST /api/customerLogin :Login required
-const hotelOwnerSignIn = async (req, res, next) => {
+const hotelSignIn = async (req, res, next) => {
   // If there are errors return bad request and the errors
   const errors = validationResult(req);
 
+  console.log("received login request");
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
@@ -15,7 +16,7 @@ const hotelOwnerSignIn = async (req, res, next) => {
   const { email, password } = req.body;
 
   try {
-    let custm = await owner.findOne({ email });
+    let custm = await hotel.findOne({ email });
     if (!custm) {
       return res.status(400).json({
         message: "Hotel Owner not found",
@@ -60,16 +61,17 @@ const hotelOwnerSignIn = async (req, res, next) => {
       message: "Error signing token",
     });
   }
-
 };
+
 const fetchSignedInOwner = async (req, res, next) => {
+  console.log("received login request for protected routes");
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
 
   try {
-    const custm = await customer.findById(req.owner.id).select("-password");
+    const custm = await hotel.findById(req.hotel.id).select("-password");
     console.log(custm);
     return res.status(200).json({
       message: "Hotel Owner fetched successfully",
@@ -82,5 +84,5 @@ const fetchSignedInOwner = async (req, res, next) => {
     });
   }
 };
-module.exports = { hotelOwnerSignIn, fetchSignedInOwner };
 
+module.exports = { hotelSignIn, fetchSignedInOwner };
