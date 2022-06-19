@@ -60,6 +60,7 @@ const hotelOwnerSignIn = async (req, res, next) => {
       message: "Error signing token",
     });
   }
+
 };
 
 
