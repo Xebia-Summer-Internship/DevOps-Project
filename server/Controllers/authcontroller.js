@@ -2,6 +2,7 @@ const customer = require("../models/customer");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
+//  Create a user account using: POST "api/customerSignUp" : Doesn't rqequire authentication
 const customerSignUp = async (req, res, next) => {
   const salt = await bcrypt.genSalt(10);
   const secPass = await bcrypt.hash(req.body.password, salt);
