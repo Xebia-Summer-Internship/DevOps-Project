@@ -62,24 +62,4 @@ const hotelOwnerSignIn = async (req, res, next) => {
   }
 };
 
-const fetchSignedInOwner = async (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
-  
-    try {
-      const custm = await customer.findById(req.owner.id).select("-password");
-      console.log(custm);
-      return res.status(200).json({
-        message: "Hotel Owner fetched successfully",
-        customer: custm,
-      });
-    } catch (error) {
-      console.log(error);
-      return res.status(500).json({
-        message: "Error fetching Hotel Owner",
-      });
-    }
-  };
-module.exports = { hotelOwnerSignIn, fetchSignedInOwner };
+
