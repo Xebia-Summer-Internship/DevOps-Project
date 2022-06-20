@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 //  Create a user account using: POST "api/customerSignUp" : Doesn't rqequire authentication
 const customerSignUp = async (req, res, next) => {
   const salt = await bcrypt.genSalt(10);
-  const secPass = await bcrypt.hash(req.body.password, salt);
+  const secPass = await bcrypt.hash(req.body.password, salt); 
 
   let user = new customer({
     name: req.body.name,
