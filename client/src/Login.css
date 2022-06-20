@@ -1,7 +1,22 @@
+.Main
+{
+    display: flex;
+    background-image: url('img/img4.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 652px;
+    opacity: .9;
+    margin-top: .1px;
+    
+}
+.design {
+    width: 50%;
+}
+
 #forms1{ 
     padding-top: 30px;
     padding-bottom: 20px;
-    width: 75%;
+    width: 50%;
     margin-left: 200px;
     margin-top: 100px;
     opacity: 1;
@@ -9,16 +24,18 @@
 }
 .form1 {
  top: 270px;
- left: 620px;
- position: absolute;   
+ left: 1000px;
+ position: absolute; 
+
 }
 #forms1 .form-heading{
         margin: 0px auto;
-        color: black;
+        color: #F5F5DC;
         text-align: center;
         font-size: 30px;
         max-width: 600px;
         position: relative;
+        margin-right: 80px;
 }
 #forms1 .form-heading::before{
     /* content: ""; */
@@ -44,13 +61,15 @@
     border-bottom: 2px solid;
     border-color: transparent;
     border-radius: 4px;
-    padding-top: 15px;
+    padding-top: 5px;
     background-color: rgb(228, 236, 244);
     width: 300px;
     text-align: left;
     font-family: sans-seri;
     font-size: 20px;
     font-weight: bolder;
+    padding-bottom: 7px;
+    margin-top: 20px;
 }
 
 
@@ -95,9 +114,55 @@
 #accountExists1{
     margin-left: 40px;
     margin-top: 0px;
+    color: #F5F5DC;
+}
+#signInBtn1{
+    color: #F5F5DC;
+    cursor: pointer;
 }
 #forgot {
     margin-left:180px;
     position: absolute;
-    top:110px;
+    top:145px;
+    color: #F5F5DC;
+    font-size: 15px;
+}
+
+#Customer2{
+    margin-left: 30px;
+    position: absolute;
+    top: 250px;
+    left: 980px;
+    border: 2px solid black;
+    cursor: pointer;
+    /* font-weight: bolder; */
+    font-size: 20px;
+    font-family: calibri;  
+    width: 130px;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    
+    
+}
+
+#Hotel2 {
+    margin-left: 360px;
+    position: absolute;
+    top:250px;
+    left: 810px;
+    border: 2px solid black;
+    cursor: pointer;
+    /* font-weight: bolder; */
+    font-size: 20px;
+    font-family: calibri;
+    width: 130px;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+}
+
+#Hotel2:hover {
+    color: white;
+    background-color: black;
 }

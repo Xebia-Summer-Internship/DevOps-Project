@@ -18,8 +18,8 @@ function SignUpH () {
                     <input type = 'email' placeholder="Enter your email" name='email'  id="email"></input><br /><br/>
                     <input type = 'text' placeholder="Enter phone number" name='phoneNumber'  id="phoneNumber"></input>
                     <input type = 'text' placeholder="Enter your pincode" name='DOB'  id="DOB"></input><br /><br/>
-                    <input type = 'text' placeholder="Enter phone hotel ID" name='phoneNumber'  id="phoneNumber"></input>
-                    <input type = 'text' placeholder="Enter phone fssai license number" name='phoneNumber'  id="DOB"></input><br /><br/>
+                    <input type = 'text' placeholder="Enter hotel ID" name='phoneNumber'  id="phoneNumber"></input>
+                    <input type = 'text' placeholder="Enter fssai license number" name='phoneNumber'  id="DOB"></input><br /><br/>
                     <input type = 'text' placeholder="Create Your Password" name='password'  id="password"></input>
                     <input type = 'text' placeholder="Confirm Password" name='conPassword'  id="confirmPassword"></input><br></br>
                     <button type='submit'>Submit</button>
