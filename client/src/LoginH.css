@@ -1,0 +1,31 @@
+#Customer3{
+    margin-left: 15px;
+    width: 130px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: calibri;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+}
+
+#Hotel3 {
+    margin-left: 40px;
+    width: 130px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: calibri;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    
+}
+
+#Customer3:hover {
+    color: white;
+    background-color: black;
+}
