@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Login from './Login';
 import SignUpC from './SignUpC';
 import SignUpH from './SignUpH';
+import LoginH from './LoginH'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
 <Switch>
 <Route exact path="/" component={Login} />
 <Route exact path="/SignUpC" component={SignUpC} />
+<Route exact path="/LoginH" component={LoginH} />
 <Route exact path="/SignUpH" component={SignUpH} />
 </Switch>
 
