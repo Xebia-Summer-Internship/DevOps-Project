@@ -44,13 +44,14 @@ form {
     border-bottom: 2px solid;
     border-color: transparent;
     border-radius: 4px;
-    padding-top: 15px;
+    padding-top: 5px;
     background-color: rgb(228, 236, 244);
     width: 300px;
     text-align: left;
     font-family: sans-seri;
     font-size: 20px;
     font-weight: bolder;
+    padding-bottom: 5px;
 }
 
 
@@ -67,9 +68,10 @@ form {
 }
 #forms .form #DOB{
     margin-left: 30px;
-    font-family: calibri;
-    color: grey;
-    font-size: 15px;
+    font-family: sans-seri;
+    font-weight: bolder;
+    /* color: grey; */
+    font-size: 20px;
 }
 #forms .form input::placeholder{
     position: absolute;
