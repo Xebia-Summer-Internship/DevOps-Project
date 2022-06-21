@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Login from './Login';
 import SignUpC from './SignUpC';
 import SignUpH from './SignUpH';
+import SignUp from './Components/SignUp'
 
 function App() {
   return (

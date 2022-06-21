@@ -8,16 +8,17 @@ function Login () {
     return (
         <>
             <Nav />
-            <div id='forms1'>
+            <br /> <br />
+            <div className='login'>
                 <h1 className='form-heading'>Login</h1>     
-                <form className='form1' >
-                    <input type = 'email' placeholder="Enter your email" name='email'  id="email1"></input><br /><br/>
-                    <input type = 'text' placeholder="Enter your Password" name='password'  id="password1"></input> <br /> 
-                    <Link to ="" id="forgot">Forgot Password?</Link> <br />               
-                    <button type='submit'>Login</button>
-                    <br></br><br></br>
-                    <p id="accountExists1">Don't have an account?<Link to ="/SignUpC" id='signInBtn1'> Sign Up</Link></p>
-                </form>
+                
+                <input type = 'email' placeholder="Enter your email" name='email'  id="email1"></input><br /><br/>
+                <input type = 'text' placeholder="Enter your Password" name='password'  id="password1"></input> <br /> 
+                            
+                <div className="button" >Login</div>
+                <br></br><br></br>
+                <p id="accountExists1">Don't have an account?<Link to ="/SignUpC" id='button'> Sign Up</Link></p>
+                
             </div>
         </>
     );
