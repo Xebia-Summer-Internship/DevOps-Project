@@ -1,6 +1,6 @@
 #Customer1{
-    margin-left: 360px;
-    margin-top: 20px;
+    /* margin-left: 360px; */
+    /* margin-top: 20px; */
     border: 2px solid black;
     cursor: pointer;
     /* font-weight: bolder; */
@@ -15,7 +15,7 @@
 
 #Hotel1 {
     margin-left: 30px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     border: 2px solid black;
     cursor: pointer;
     /* font-weight: bolder; */
@@ -28,6 +28,24 @@
 }
 
 #Customer1:hover {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
+}
+.Signup1{
+    width: 700px;
+    background: #FFFFFF;
+    border: 1px solid #dddfe2;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    align-self: auto;
+    /* max-width: fit-content; */
+    margin-left: 10px;
+    margin: auto;
+    opacity: 0.8;
+    /* margin-top: 130px; */
+    height: 440px;
+    max-height: fit-content;
 }
