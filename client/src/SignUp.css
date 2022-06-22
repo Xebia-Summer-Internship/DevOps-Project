@@ -1,17 +1,53 @@
+.Cont {
+    display: flex;
+    background-image: url('img/img4.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 652px;
+    opacity: .9;
+    margin-top: .1px;
+    
+}
+.div1{
+    display: flex;
+    align-items: center;
+    margin-left: 135px;
+}
+
 #forms{ 
-    padding-top: 30px;
-    padding-bottom: 20px;
-    width: 75%;
-    margin-left: 200px;
-    margin-top: 100px;
+    /* padding-top: 30px; */
+    /* padding-bottom: 20px; */
+    /* width: 75%; */
+    /* margin-left: 200px; */
+    /* margin-top: 100px; */
     opacity: 1;
     /* background-color: whitesmoke; */
 }
+.Signup{
+    width: 700px;
+    background: #FFFFFF;
+    border: 1px solid #dddfe2;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    align-self: auto;
+    /* max-width: fit-content; */
+    margin-left: 10px;
+    margin: auto;
+    opacity: 0.8;
+    /* margin-top: 130px; */
+    height: 370px;
+    max-height: fit-content;
+}
+
 form {
- top: 310px;
- left: 465px;
+ /* top: 310px; */
+ left: 455px;
  position: absolute;   
 }
+
 #forms .form-heading{
         margin: 0px auto;
         color: black;
@@ -73,9 +109,17 @@ form {
     /* color: grey; */
     font-size: 20px;
 }
+#forms .form #license{
+    margin-left: 30px;
+    font-family: sans-seri;
+    font-weight: bolder;
+    /* color: grey; */
+    font-size: 20px;
+}
 #forms .form input::placeholder{
     position: absolute;
     top: 10px;
+    
 }
 #forms .form input::placeholder{
     font-family: calibri;
@@ -99,19 +143,23 @@ form {
     color: white;
     background-color: black;
     border-radius: 4px;
-    margin-left: 165px;
+    /* margin-left: 165px; */
 }
 .form{
     margin-right: 100px;
 }
 #accountExists{
-    margin-left: 200px;
+    /* margin-left: 200px; */
     margin-top: 0px;
+}
+#signInBtn{
+    color: blue;
+    cursor: pointer;
 }
 
 #Customer{
-    margin-left: 360px;
-    margin-top: 20px;
+    /* margin-left: 360px; */
+    /* margin-top: 20px; */
     border: 2px solid black;
     cursor: pointer;
     /* font-weight: bolder; */
@@ -126,7 +174,7 @@ form {
 
 #Hotel {
     margin-left: 30px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     border: 2px solid black;
     cursor: pointer;
     /* font-weight: bolder; */
@@ -141,4 +189,28 @@ form {
 #Hotel:hover {
     color: white;
     background-color: black;
+}
+
+@media screen and (max-width:1000px) {
+    .Signup{
+        width: 250px;
+        height: 600px;
+    }
+   
+       .div1 {
+        display: list-item;
+        margin-left: 0px;
+       }
+       
+    #forms .form button{
+     
+        width: 200px;
+        
+    }
+    #forms .form input{
+       
+        width: 200px;
+        
+    }
+    
 }
