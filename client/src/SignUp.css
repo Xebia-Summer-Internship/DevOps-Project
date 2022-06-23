@@ -8,10 +8,14 @@
     margin-top: .1px;
     
 }
-.div1{
+.button-container{
     display: flex;
     align-items: center;
-    margin-left: 135px;
+    align-self: center;
+    gap: 1rem;
+    justify-content: center;
+    max-width:  none !important;
+    
 }
 
 #forms{ 
@@ -24,7 +28,7 @@
     /* background-color: whitesmoke; */
 }
 .Signup{
-    width: 700px;
+    /* width: 700px; */
     background: #FFFFFF;
     border: 1px solid #dddfe2;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
@@ -33,13 +37,12 @@
     align-items: center;
     text-align: center;
     align-self: auto;
-    /* max-width: fit-content; */
     margin-left: 10px;
     margin: auto;
     opacity: 0.8;
     /* margin-top: 130px; */
-    height: 370px;
     max-height: fit-content;
+    max-width: fit-content;
 }
 
 form {
@@ -82,12 +85,12 @@ form {
     border-radius: 4px;
     padding-top: 5px;
     background-color: rgb(228, 236, 244);
-    width: 300px;
+    /* width: 300px; */
     text-align: left;
-    font-family: sans-seri;
+    font-family: sans-serif;
     font-size: 20px;
     font-weight: bolder;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
 }
 
 
@@ -158,29 +161,31 @@ form {
 }
 
 #Customer{
-    /* margin-left: 360px; */
-    /* margin-top: 20px; */
+    
+    width: 120px;
     border: 2px solid black;
     cursor: pointer;
-    /* font-weight: bolder; */
+    font-weight: bolder;
     font-size: 20px;
     font-family: calibri;
-    width: 210px;
     color: white;
     background-color: black;
     border-radius: 4px;
     
 }
+#Customer:hover {
+    color: black;
+    background-color: white;
+}
 
 #Hotel {
-    margin-left: 30px;
-    /* margin-top: 20px; */
+    width: 120px;
+    
     border: 2px solid black;
     cursor: pointer;
-    /* font-weight: bolder; */
+    font-weight: bolder;
     font-size: 20px;
-    font-family: calibri;  
-    width: 210px;
+    font-family: calibri;
     color: black;
     background-color: white;
     border-radius: 4px;
@@ -189,6 +194,7 @@ form {
 #Hotel:hover {
     color: white;
     background-color: black;
+    -webkit-animation-delay: 10ms;
 }
 
 @media screen and (max-width:1000px) {
@@ -202,7 +208,7 @@ form {
         margin-left: 0px;
        }
        
-    #forms .form button{
+    /* #forms .form button{
      
         width: 200px;
         
@@ -211,6 +217,70 @@ form {
        
         width: 200px;
         
-    }
+    } */
     
+}
+#field-container {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    max-width: fit-content;
+    max-height: fit-content;
+    white-space: 10px;
+}
+
+.vip-form {
+    position: static !important;
+}
+
+.vip-form * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.name-email-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+
+.vip-form-inner input {
+    display: block;
+    width: 100%;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    padding: .5rem;
+    border-radius: .25rem;
+    background-color: #faf5f5;
+    border: 1px solid #000
+}
+
+.vip-form-inner input:focus {
+    border-color: red;
+}
+
+.vip-form-inner .submit {
+    align-self: center;
+    width: 100%;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    padding: .5rem;
+    border-radius: .25rem;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.vip-form-inner .submit:hover {
+    background-color: #2c3e50;
 }
