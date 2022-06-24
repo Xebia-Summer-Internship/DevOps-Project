@@ -6,6 +6,13 @@ color: #F5F5DC;
 
 }
 
+@media screen and (min-height: 1000px) {
+    .Navbar {
+        margin-top: -1%;
+        height: 110px;
+    }
+}
+
 .Text {
     text-align: right;
     margin-right: 2%;
