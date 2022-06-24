@@ -1,6 +1,6 @@
 .Cont {
     display: flex;
-    background-image: url('img/img4.jpg');
+    background-image: url('img/img9.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 652px;
@@ -8,6 +8,13 @@
     margin-top: .1px;
     
 }
+
+@media screen and (min-height: 1000px) {
+    .Cont {
+        height: 1173px;
+    }
+}
+
 .button-container{
     display: flex;
     align-items: center;
@@ -27,6 +34,7 @@
     opacity: 1;
     /* background-color: whitesmoke; */
 }
+
 .Signup{
     /* width: 700px; */
     background: #FFFFFF;
@@ -59,6 +67,7 @@ form {
         max-width: 600px;
         position: relative;
 }
+
 #forms .form-heading::before{
     /* content: ""; */
     display: block;
@@ -67,6 +76,7 @@ form {
     background: black;
     /* position: absolute; */
 }
+
 #forms .form-heading::after{
     /* content: ""; */
     display: block;
@@ -99,12 +109,15 @@ form {
     border-bottom: 2px solid;
     text-align: center;
 }
+
 #forms .form #email{
     margin-left: 30px;
 }
+
 #forms .form #confirmPassword{
     margin-left: 30px;
 }
+
 #forms .form #DOB{
     margin-left: 30px;
     font-family: sans-seri;
@@ -112,6 +125,7 @@ form {
     /* color: grey; */
     font-size: 20px;
 }
+
 #forms .form #license{
     margin-left: 30px;
     font-family: sans-seri;
@@ -119,11 +133,13 @@ form {
     /* color: grey; */
     font-size: 20px;
 }
+
 #forms .form input::placeholder{
     position: absolute;
     top: 10px;
     
 }
+
 #forms .form input::placeholder{
     font-family: calibri;
     font-size: 15px;
@@ -134,6 +150,7 @@ form {
     bottom: 2px;
     color: grey;
 }
+
 #forms .form button{
     /* background-color: green; */
     border: 2px solid black;
@@ -148,13 +165,16 @@ form {
     border-radius: 4px;
     /* margin-left: 165px; */
 }
+
 .form{
     margin-right: 100px;
 }
+
 #accountExists{
     /* margin-left: 200px; */
     margin-top: 0px;
 }
+
 #signInBtn{
     color: blue;
     cursor: pointer;
@@ -173,6 +193,7 @@ form {
     border-radius: 4px;
     
 }
+
 #Customer:hover {
     color: black;
     background-color: white;
@@ -220,6 +241,7 @@ form {
     } */
     
 }
+
 #field-container {
     display: flex;
     align-self: center;
