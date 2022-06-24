@@ -1,6 +1,7 @@
 // Page for SignUp Page For User.
 import React from 'react';
 import './SignUp.css';
+import './SignUpH.css';
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
 
@@ -13,8 +14,8 @@ function SignUpH () {
         <div id='forms'>
                 <h1 className='form-heading'>Sign Up</h1> <br />
             <div className='d-flex button-container'>
-                <div > <Link to='/SignUpC'> <button id ='Customer'>Customer</button> </Link> </div>
-                <div > <Link to='/SignUpH'> <button id ='Hotel'>Hotel</button> </Link>  </div> 
+                <div > <Link to='/SignUpC'> <button id ='Customer1'>Customer</button> </Link> </div>
+                <div > <Link to='/SignUpH'> <button id ='Hotel1'>Hotel</button> </Link>  </div> 
             </div>
                 <form className='vip-form' >
                 <div className="vip-form-inner">

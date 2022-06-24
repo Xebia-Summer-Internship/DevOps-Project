@@ -27,7 +27,7 @@ function SignUpC () {
 
                     <div className="d-flex name-email-wrapper">
                     <input type="text" placeholder="Enter phone number" name='phoneNumber'/>
-                    <input type="date" placeholder="Enter your date of birth" name='DOB' />   
+                    <input type="date" placeholder="Enter your date of birth" name='DOB' id='DoB' />   
                     </div>
 
                     <div className="d-flex name-email-wrapper">

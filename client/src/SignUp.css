@@ -34,6 +34,11 @@
     opacity: 1;
     /* background-color: whitesmoke; */
 }
+@media screen and (max-width:500px) {
+    #forms {
+        height: 400px;
+    }
+}
 
 .Signup{
     /* width: 700px; */
@@ -165,6 +170,35 @@ form {
     border-radius: 4px;
     /* margin-left: 165px; */
 }
+.vip-form input{
+    text-align: left;
+    font-family: sans-seri;
+    font-size: 20px;
+    font-weight: bolder;
+    /* padding-bottom: 7px; */
+  
+    border-bottom: 2px solid;
+    border-color: transparent;
+    border-radius: 4px;
+    /* padding-top: 5px; */
+    background-color: rgb(228, 236, 244);
+}
+.vip-form input:target{
+    border-color: transparent;
+    border-bottom: 2px solid;
+    text-align: center;
+}
+
+.vip-form input::placeholder{
+    font-family: calibri;
+    font-size: 15px;
+ 
+    text-align: left;
+    position: absolute;
+    /* top: 10px;
+    bottom: 2px; */
+    color: grey;
+}
 
 .form{
     margin-right: 100px;
@@ -219,26 +253,17 @@ form {
 }
 
 @media screen and (max-width:1000px) {
-    .Signup{
+    /* .Signup{
         width: 250px;
         height: 600px;
-    }
+    } */
    
        .div1 {
         display: list-item;
         margin-left: 0px;
        }
        
-    /* #forms .form button{
-     
-        width: 200px;
-        
-    }
-    #forms .form input{
-       
-        width: 200px;
-        
-    } */
+
     
 }
 
@@ -272,22 +297,26 @@ form {
     margin-top: 1rem;
 }
 
+ /* #DoB{
+    width: 250px;
+} */
+
 
 .vip-form-inner input {
     display: block;
     width: 100%;
     border: 0;
     outline: none;
-    font-size: 20px;
+    /* font-size: 20px; */
     padding: .5rem;
     border-radius: .25rem;
-    background-color: #faf5f5;
-    border: 1px solid #000
+    /* background-color: #faf5f5;
+    border: 1px solid #000 */
 }
 
-.vip-form-inner input:focus {
+/* .vip-form-inner input:focus {
     border-color: red;
-}
+} */
 
 .vip-form-inner .submit {
     align-self: center;
