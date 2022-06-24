@@ -9,9 +9,15 @@
     
 }
 
-@media screen and (min-height: 1000px) {
+@media screen and (min-height: 700px) {
     .Cont {
         height: 1173px;
+    }
+}
+
+@media screen and (min-height: 700px) and (max-height: 1000px){
+    .Cont {
+        height: 830px;
     }
 }
 
