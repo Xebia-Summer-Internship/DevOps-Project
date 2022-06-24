@@ -1,13 +1,19 @@
 .Main {
     display: flex;
-    background-image: url('img/img4.jpg');
+    background-image: url('img/img7.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 652px;
     opacity: .9;
     margin-top: .1px;
-    
 }
+
+@media screen and (min-height: 1000px) {
+    .Main {
+        height: 1173px;
+    }
+}
+
 .design {
     width: 50%;
 }
