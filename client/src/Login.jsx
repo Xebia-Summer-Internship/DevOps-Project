@@ -12,8 +12,8 @@ function Login () {
                 <div className="login">
                     <h1 className='form-heading'>Login</h1> 
                     <div className='button-container'>
-                        <Link to='/'> <button id ='Customer2'>Customer</button> </Link>
-                        <Link to='/LoginH'> <button id ='Hotel2'>Hotel</button> </Link> 
+                        <Link to='/'> <button id ='Customer2'>Soma</button> </Link>
+                        <Link to='/LoginH'> <button id ='Hotel2'>Ayush</button> </Link> 
                     </div> 
                     <br /><br />
                     <input type = 'email' placeholder="Enter your email" name='email'  id="email1"></input><br /><br/>
