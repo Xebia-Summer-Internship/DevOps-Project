@@ -6,6 +6,7 @@
     height: 652px;
     opacity: .9;
     margin-top: .1px;
+    overflow: hidden;
     
 }
 
@@ -241,10 +242,10 @@ form {
     
 }
 
-#Customer:hover {
+/* #Customer:hover {
     color: black;
     background-color: white;
-}
+} */
 
 #Hotel {
     width: 120px;
@@ -262,7 +263,7 @@ form {
 #Hotel:hover {
     color: white;
     background-color: black;
-    -webkit-animation-delay: 10ms;
+    /* -webkit-animation-delay: 10ms; */
 }
 
 @media screen and (max-width:1000px) {

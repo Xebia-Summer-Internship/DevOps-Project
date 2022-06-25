@@ -6,6 +6,7 @@
     height: 652px;
     opacity: .9;
     margin-top: .1px;
+    overflow: hidden;
 }
 
 @media screen and (min-height: 1000px) {
