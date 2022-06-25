@@ -9,14 +9,10 @@ const AuthRouter = require("./routes/auth.js"); // call the router
 app.use(express.json());
 
 // Routes available
-// app.get("/hello", (req, res) => {
-//   res.send("Hello World");
-// });
 
 app.use("/api", AuthRouter);
 
 //  Server invoke
-
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
