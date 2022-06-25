@@ -6,8 +6,16 @@ const port = process.env.PORT || 5001;
 
 const AuthRouter = require("./routes/auth.js"); // call the router
 
-app.use(express.json());
-
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+app.use(
+  express.json({
+    type: ["application/json", "text/plain"],
+  })
+);
 // Routes available
 
 app.use("/api", AuthRouter);
