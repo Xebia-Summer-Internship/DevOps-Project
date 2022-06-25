@@ -13,6 +13,7 @@
     
 }
 
+
 #Hotel1 {
     margin-left: 30px;
     /* margin-top: 20px; */
@@ -25,6 +26,18 @@
     color: white;
     background-color: black;
     border-radius: 4px;
+}
+
+@media screen and (max-width: 500px) {
+    #Customer1 {
+        width: 140%;
+        margin-left: -80%;
+    }
+
+    #Hotel1 {
+        width: 240%;
+        margin-left: -25%;
+    }
 }
 
 #Customer1:hover {
