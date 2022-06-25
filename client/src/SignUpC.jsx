@@ -1,7 +1,7 @@
 // Page for SignUp Page For User.
 import React from 'react';
 import './SignUp.css';
-import './SignUpH.css';
+
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
 
@@ -9,24 +9,40 @@ function SignUpC () {
     return (
         <>
         <Nav />
-            <div id='forms'>
-                <h1 className='form-heading'>Sign Up</h1>
-              <Link to='/SignUpC'> <button id ='Customer'>As Customer</button> </Link>
-               <Link to='/SignUpH'> <button id ='Hotel'>As Hotel</button> </Link>
-                
-                <form className='form' >
-                    <input type = 'text' placeholder='Enter your name' name='name'  id="yourName"></input>
-                    <input type = 'email' placeholder="Enter your email" name='email'  id="email"></input><br /><br/>
-                    <input type = 'text' placeholder="Enter phone number" name='phoneNumber'  id="phoneNumber"></input>
-                    <input type = 'date' placeholder="Enter your date of birth" name='DOB'  id="DOB"></input><br /><br/>
-                    <input type = 'text' placeholder="Create Your Password" name='password'  id="password"></input>
-                    <input type = 'text' placeholder="Confirm Password" name='conPassword'  id="confirmPassword"></input><br></br>
-                    <button type='submit'>Submit</button>
-                    <br></br><br></br>
-                    <p id="accountExists">Already have an account?<Link to ="/"id='signInBtn'> Sign in</Link></p>
-                </form>
+    <div className='Cont'>
+    <div className='Signup'>
+        <div id='forms'>
+                <h1 className='form-heading'>Sign Up</h1> <br />
+            <div className='d-flex button-container'>
+                <div > <Link to='/SignUpC'> <button id ='Customer'>Customer</button> </Link> </div>
+                <div > <Link to='/SignUpH'> <button id ='Hotel'>Hotel</button> </Link>  </div> 
             </div>
 
+                <form class="vip-form" action="">
+                    <div className="vip-form-inner">
+                    <div className="d-flex name-email-wrapper">
+                    <input type="text" placeholder='Enter your name' name='name' />
+                    <input type="email" placeholder="Enter your email" name='email' />
+                    </div>
+
+                    <div className="d-flex name-email-wrapper">
+                    <input type="text" placeholder="Enter phone number" name='phoneNumber'/>
+                    <input type="date" placeholder="Enter your date of birth" name='DOB' id='DoB' />   
+                    </div>
+
+                    <div className="d-flex name-email-wrapper">
+                    <input type="password" placeholder="Create Your Password" name='password'/>
+                    <input type="password" placeholder="Confirm Password" name='conPassword'/>   
+                    </div>
+                    <div className='mt-1'>
+                       <button className="submit" type="submit">Submit</button>
+                    </div> <br />
+                    <p id="accountExists"><b>Already have an account?</b><Link to ="/"id='signInBtn'> <b>Sign in</b></Link></p>
+                    </div>
+                </form>
+        </div>
+    </div>
+    </div>
         </>
     );
 }

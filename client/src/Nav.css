@@ -3,7 +3,15 @@ background-color: black;
 margin-top: -2%;
 height: 100px;
 color: #F5F5DC;
+opacity: .9;
 
+}
+
+@media screen and (min-height: 1000px) {
+    .Navbar {
+        margin-top: -1%;
+        height: 110px;
+    }
 }
 
 .Text {

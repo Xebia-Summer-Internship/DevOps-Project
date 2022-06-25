@@ -1,13 +1,25 @@
 .Main {
     display: flex;
-    background-image: url('img/img4.jpg');
+    background-image: url('img/img7.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 652px;
     opacity: .9;
     margin-top: .1px;
-    
 }
+
+@media screen and (min-height: 700px) {
+    .Main {
+        height: 1173px;
+    }
+}
+
+@media screen and (min-height: 700px) and (max-height: 1000px){
+    .Main {
+        height: 830px;
+    }
+}
+
 .design {
     width: 50%;
 }
@@ -119,7 +131,7 @@
 }
 
 #accountExists1{
-    margin-left: 40px;
+    /* margin-left: 20px; */
     margin-top: 0px;
     color: black;
 }
@@ -244,7 +256,10 @@
     background-color: black;
     border-radius: 4px;
 }
-
+.login button:hover {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
 .button-container{
     display: flex;
     /* background-color: red; */
