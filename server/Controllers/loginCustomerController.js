@@ -33,14 +33,12 @@ const customerSignIn = async (req, res, next) => {
     const payload = {
       id: custm.id,
       name: custm.name,
-      email: custm.email,
-      phone: custm.phone,
     };
 
     jwt.sign(
       payload,
       process.env.JWT_SECRET_KEY,
-      { expiresIn: "1h" },
+      { expiresIn: "15m" },
       (err, token) => {
         if (err) {
           return res.status(500).json({
