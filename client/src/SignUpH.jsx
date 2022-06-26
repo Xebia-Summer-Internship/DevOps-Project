@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 function SignUpH (props) {
 
-    const [credentials, setCredentials] = useState({name:"",email:"",phoneNumber:"",fassaiid:"",address:"",pincode:"",password:""});
+    const [credentials, setCredentials] = useState({name:"",email:"",phoneNumber:"",FassaiID:"",address:"",pincode:"",password:""});
 
     const onChange = (e)=>{
         setCredentials({...credentials,[e.target.name]:e.target.value})
@@ -23,7 +23,7 @@ function SignUpH (props) {
             email: credentials.email,
             password: credentials.password,
             name: credentials.name,
-            fassaiid: credentials.fassaiid,
+            FassaiID: credentials.FassaiID,
             address:credentials.address,
             pincode:credentials.pincode,
             phoneNumber: credentials.phoneNumber
@@ -80,7 +80,7 @@ function SignUpH (props) {
                 
                 <div className="d-flex name-email-wrapper">
                     <input type = 'text' placeholder="Enter hotel Address" name='address' onChange={onChange}/>
-                    <input type = 'text' placeholder="Enter fssai license number" name='fassaiid'onChange={onChange}/>   
+                    <input type = 'text' placeholder="Enter fssai license number" name='FassaiID'onChange={onChange}/>   
                 </div>
                     
                 <div className="d-flex name-email-wrapper">

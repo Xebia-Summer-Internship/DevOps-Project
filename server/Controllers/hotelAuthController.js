@@ -12,7 +12,7 @@ const hotelOwnerSignUp = async (req, res, next) => {
     name: req.body.name,
     email: req.body.email,
     phone: req.body.phoneNumber,
-    FassaiID: req.body.fssaiid,
+    FassaiID: req.body.FassaiID,
     password: secPass,
     address: req.body.address,
     pincode: req.body.pincode,
