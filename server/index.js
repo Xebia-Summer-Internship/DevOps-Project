@@ -2,21 +2,31 @@ require("dotenv").config(); // call the .env file and include the environment va
 require("./db"); // call db connection
 const express = require("express"); // middleware call
 const app = express(); // invoke function
-const port = process.env.PORT || 5001; 
+const cors = require("cors"); // middleware call
+const port = process.env.PORT || 5001;
 
 const AuthRouter = require("./routes/auth.js"); // call the router
 
-app.use(express.json());
-
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+app.use(
+  express.json({
+    type: ["application/json", "text/plain"],
+  })
+);
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "http://localhost:5000", "*"],
+    methods: ["GET", "POST"],
+  })
+);
 // Routes available
-// app.get("/hello", (req, res) => {
-//   res.send("Hello World");
-// });
-
 app.use("/api", AuthRouter);
 
-//  Server invoke 
-
+//  Server invoke
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

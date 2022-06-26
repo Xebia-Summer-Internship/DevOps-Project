@@ -9,6 +9,7 @@ const hotelSchema = new Schema(
     },
     email: {
       type: String,
+      unique: true,
       required: true,
     },
     phone: {
