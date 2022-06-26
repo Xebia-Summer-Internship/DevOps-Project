@@ -31,7 +31,7 @@ function SignUpH () {
                 
                 <div className="d-flex name-email-wrapper">
                     <input type = 'text' placeholder="Enter hotel ID" name='phoneNumber' />
-                    <input type = 'text' placeholder="Enter fssai license number" name='phoneNumber'/>   
+                    <input type = 'text' placeholder="Enter Fssai License ID" name='phoneNumber'/>   
                 </div>
                     
                 <div className="d-flex name-email-wrapper">

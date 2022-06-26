@@ -6,16 +6,17 @@
     height: 652px;
     opacity: .9;
     margin-top: .1px;
+    overflow: hidden;
     
 }
 
-@media screen and (min-height: 700px) {
+@media screen and (min-height: 1000px) {
     .Cont {
         height: 1173px;
     }
 }
 
-@media screen and (min-height: 700px) and (max-height: 1000px){
+@media screen and (min-height: 730px) and (max-height: 1000px){
     .Cont {
         height: 830px;
     }
@@ -40,6 +41,7 @@
     opacity: 1;
     /* background-color: whitesmoke; */
 }
+
 @media screen and (max-width:500px) {
     #forms {
         height: 400px;
@@ -206,6 +208,12 @@ form {
     color: grey;
 }
 
+@media screen and (max-width: 500px) {
+    .Signup{
+        width:80%;
+    }
+}
+
 .form{
     margin-right: 100px;
 }
@@ -234,10 +242,10 @@ form {
     
 }
 
-#Customer:hover {
+/* #Customer:hover {
     color: black;
     background-color: white;
-}
+} */
 
 #Hotel {
     width: 120px;
@@ -255,7 +263,7 @@ form {
 #Hotel:hover {
     color: white;
     background-color: black;
-    -webkit-animation-delay: 10ms;
+    /* -webkit-animation-delay: 10ms; */
 }
 
 @media screen and (max-width:1000px) {
