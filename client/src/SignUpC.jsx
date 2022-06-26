@@ -26,9 +26,12 @@ function SignUpC (props) {
 
         // console.log(JSON.stringify(awesomeObj));
        
-        var response = await fetch('http://localhost:5000/api/customerSignUp', {
+        var response = await fetch('/api/customerSignUp', {
             method: 'POST',
             mode: 'no-cors',
+            cache: 'no-cache',
+            accessControlAllowOrigin: 'http://localhost:5000,*',
+            accept: 'application/json',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(dataObj)
         });
@@ -37,13 +40,13 @@ function SignUpC (props) {
         console.log("response received: " + JSON.stringify(json));
 
         if(json.success){            
-            localStorage.setItem('token',json.jwtToken);
-            // props.showAlert("Logged in  successfully!","success")
-            //Redirect Here
-            <Redirect to="/userDashboard"/>
+            localStorage.setItem('access-token',json.jwtToken);
+            // handle success - redirect to home page
+            // Redirect Here
+            <Redirect to="/"/>
         }
         else{
-            props.showAlert("Invalid Credentials","danger");
+            //alert to show error to be handeled by frontend
         }
 
     }
@@ -67,13 +70,13 @@ function SignUpC (props) {
                                         <input type="email" placeholder="Enter your email" name='email' onChange={onChange} />
                                     </div>
                                     <div className="d-flex name-email-wrapper">
-                                    <input type="text" placeholder="Enter phone number" name='phoneNumber'onChange={onChange}/>
-                                    <input type="date" placeholder="Enter your date of birth" name='DOB' id='DoB' />   
+                                        <input type="text" placeholder="Enter phone number" name='phoneNumber'onChange={onChange}/>
+                                        <input type="date" placeholder="Enter your date of birth" name='DOB' id='DoB' />   
                                     </div>
 
                                     <div className="d-flex name-email-wrapper">
-                                    <input type="password" placeholder="Create Your Password" name='password'onChange={onChange}/>
-                                    <input type="password" placeholder="Confirm Password" name='conPassword'/>   
+                                        <input type="password" placeholder="Create Your Password" name='password'onChange={onChange}/>
+                                        <input type="password" placeholder="Confirm Password" name='conPassword'/>   
                                     </div>
                                     <div className='mt-1'>
                                     <button className="submit" type="submit">Submit</button>

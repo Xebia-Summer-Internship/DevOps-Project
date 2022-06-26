@@ -31,38 +31,43 @@ const customerSignUp = async (req, res, next) => {
     name: user.name,
   };
 
+  jwt.sign(
+    payload,
+    process.env.JWT_SECRET_KEY,
+    { expiresIn: "15m" },
+    (err, token) => {
+      if (err) {
+        return res.status(500).json({
+          message: "Error signing token",
+        });
+      }
+
+      resObj = {
+        success: true,
+        message: "Customer Added Successfully",
+        jwtToken: token,
+        user: payload,
+      };
+    }
+  );
+
   try {
     await user
       .save()
       .then((customer) => {
+        console.log(customer);
         res.set({
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
         });
-        success = true;
-        jwt.sign(
-          payload,
-          process.env.JWT_SECRET_KEY,
-          { expiresIn: "15m" },
-          (err, token) => {
-            if (err) {
-              return res.status(500).json({
-                message: "Error signing token",
-              });
-            }
-            resObj = {
-              success,
-              message: "Customer Added Successfully",
-              jwtToken: token,
-              user: payload,
-            };
-          }
-        );
+        console.log(resObj);
+        // res.send(resObj);
         res.json({
           resObj,
         });
       })
       .catch((error) => {
+        console.log(error);
         res.json({
           message: "An error occured while saving the user!",
         });
