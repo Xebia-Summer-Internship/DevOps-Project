@@ -48,7 +48,6 @@ function SignUpC (props) {
         else{
             //alert to show error to be handeled by frontend
         }
-
     }
 
     return (
