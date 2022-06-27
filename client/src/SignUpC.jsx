@@ -4,6 +4,7 @@ import './SignUp.css';
 import {Redirect} from 'react-router-dom'
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
+import $ from 'jquery';
 
 function SignUpC (props) {
 
@@ -13,6 +14,40 @@ function SignUpC (props) {
         setCredentials({...credentials,[e.target.name]:e.target.value})
     }
 
+    //Validating input fields
+    function phoneNumberValid(phoneNumber){
+        var regex = /^[0-9]*$/;
+        var isValid = regex.test(phoneNumber);
+        var result = true;
+        result = (!isValid) ? false : true;
+        return result;
+    }
+    function nameValid(name){
+        var regex = /^[A-Za-z]*$/;
+        var isValid = regex.test(name);
+        var result = true;
+        result = (!isValid) ? false : true
+        return result;
+    }
+
+    //Validations function
+    var conPassword = "";
+    function validations(object){
+        var clientValidations = true;
+        if(nameValid(object.name) == false){
+            $('#validationDivision').append($("<div\"></div>").html("<h4><b></b></h4><span style=\"color:red\">Invalid Name</span>"));
+            clientValidations = false;
+        }
+        if(phoneNumberValid(object.phone) == false || object.phone.length != 10){
+            $('#validationDivision').append($("<div\"></div>").html("<h4><b></b></h4><span style=\"color:red\">Invalid phone number</span>"));
+            clientValidations = false;
+        }
+        if(object.password != conPassword){
+            $('#validationDivision').append($("<div\"></div>").html("<h4><b></b></h4><span style=\"color:red\">Passwords does not match</span>"));
+            clientValidations = false;
+        }
+        return clientValidations;
+    }
     const handleOnSubmit = async (e) => {
         e.preventDefault()
         console.log(credentials);
@@ -22,10 +57,10 @@ function SignUpC (props) {
             password: credentials.password,
             name: credentials.name,
             phone: credentials.phoneNumber
-        }       
+        }
+        conPassword = $('#conPassword').val();
+        if(validations(dataObj)){
 
-        // console.log(JSON.stringify(awesomeObj));
-       
         var response = await fetch('/api/customerSignUp', {
             method: 'POST',
             mode: 'no-cors',
@@ -48,6 +83,7 @@ function SignUpC (props) {
         else{
             //alert to show error to be handeled by frontend
         }
+    }
 
     }
 
@@ -55,6 +91,7 @@ function SignUpC (props) {
         <>
         <Nav />
             <div className='Cont'>
+               <div id = "validationDivision"></div>
                 <div className='Signup'>
                     <div id='forms'>
                             <h1 className='form-heading'>Sign Up</h1> <br />
@@ -62,21 +99,20 @@ function SignUpC (props) {
                             <div > <Link to='/SignUpC'> <button id ='Customer'>Customer</button> </Link> </div>
                             <div > <Link to='/SignUpH'> <button id ='Hotel'>Hotel</button> </Link>  </div> 
                         </div>
-
+                        
                         <form className="vip-form" action="" onSubmit={handleOnSubmit}>
                                 <div className="vip-form-inner">
                                     <div className="d-flex name-email-wrapper">
-                                        <input type="text" placeholder='Enter your name' name='name' onChange={onChange}/>
-                                        <input type="email" placeholder="Enter your email" name='email' onChange={onChange} />
+                                        <input type="text" placeholder='Enter your name' name='name' onChange={onChange} required/>
+                                        <input type="email" placeholder="Enter your email" name='email' onChange={onChange} required/>
                                     </div>
                                     <div className="d-flex name-email-wrapper">
-                                        <input type="text" placeholder="Enter phone number" name='phoneNumber'onChange={onChange}/>
-                                        <input type="date" placeholder="Enter your date of birth" name='DOB' id='DoB' />   
+                                        <input type="text" placeholder="Enter phone number" name='phoneNumber'onChange={onChange} required/>
+                                        <input type="date" placeholder="Enter your date of birth" name='DOB' id='DoB' required/>   
                                     </div>
-
                                     <div className="d-flex name-email-wrapper">
-                                        <input type="password" placeholder="Create Your Password" name='password'onChange={onChange}/>
-                                        <input type="password" placeholder="Confirm Password" name='conPassword'/>   
+                                        <input type="password" placeholder="Create Your Password" name='password'onChange={onChange} required/>
+                                        <input type="password" placeholder="Confirm Password" name='conPassword' id="conPassword" required/>   
                                     </div>
                                     <div className='mt-1'>
                                     <button className="submit" type="submit">Submit</button>
