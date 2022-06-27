@@ -6,6 +6,7 @@ import './SignUpH.css';
 import {Redirect} from 'react-router-dom'
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
+import $ from 'jquery';
 
 function SignUpH (props) {
 
@@ -13,6 +14,45 @@ function SignUpH (props) {
 
     const onChange = (e)=>{
         setCredentials({...credentials,[e.target.name]:e.target.value})
+    }
+
+    //Validating input fields
+    function phonePinNumberValid(phonePinNumber){
+        var regex = /^[0-9]*$/;
+        var isValid = regex.test(phonePinNumber);
+        var result = true;
+        result = (!isValid) ? false : true;
+        return result;
+    }
+    function nameValid(name){
+        var regex = /^[A-Za-z ]*$/;
+        var isValid = regex.test(name);
+        var result = true;
+        result = (!isValid) ? false : true
+        return result;
+    }
+
+    var conPassword = "";
+    //Validations Function
+    function validations(object){
+        var clientValidations = true;
+        if(nameValid(object.name) == false){
+            $('#validationDivision').append($("<div\"></div>").html("<h4><b></b></h4><span style=\"color:red\">Invalid Name</span>"));
+            clientValidations = false;
+        }
+        if(phonePinNumberValid(object.phone) == false || object.phone.length != 10){
+            $('#validationDivision').append($("<div\"></div>").html("<h4><b></b></h4><span style=\"color:red\">Invalid phone number</span>"));
+            clientValidations = false;
+        }
+        if(phonePinNumberValid(object.pincode) == false || object.pincode.length != 6){
+            $('#validationDivision').append($("<div\"></div>").html("<h4><b></b></h4><span style=\"color:red\">Invalid pincode</span>"));
+            clientValidations = false;
+        }
+        if(object.password != conPassword){
+            $('#validationDivision').append($("<div\"></div>").html("<h4><b></b></h4><span style=\"color:red\">Passwords does not match</span>"));
+            clientValidations = false;
+        }
+        return clientValidations;
     }
 
     const handleOnSubmit = async (e) => {
@@ -30,7 +70,7 @@ function SignUpH (props) {
         }       
 
         // console.log(JSON.stringify(awesomeObj));
-
+        if(validations(dataObj)){
         var response = await fetch('/api/hotelOwnerSignUp', {
             method: 'POST',
             mode: 'no-cors',
@@ -53,12 +93,14 @@ function SignUpH (props) {
         else{
             //alert to show error to be handeled by frontend
         }
-
+    
+    }
     }
     return (
         <>
         <Nav />
     <div className='Cont'>
+    <div id = "validationDivision"></div>
     <div className='Signup'>
         <div id='forms'>
                 <h1 className='form-heading'>Sign Up</h1> <br />
@@ -69,23 +111,23 @@ function SignUpH (props) {
                 <form className='vip-form' action="" onSubmit={handleOnSubmit}>
                 <div className="vip-form-inner">
                     <div className="d-flex name-email-wrapper">
-                    <input type="text" placeholder='Enter your name' name='name' onChange={onChange}/>
-                    <input type="email" placeholder="Enter your email" name='email' onChange={onChange}/>
+                    <input type="text" placeholder='Enter your name' name='name' onChange={onChange} required/>
+                    <input type="email" placeholder="Enter your email" name='email' onChange={onChange} required/>
                 </div>
 
                 <div className="d-flex name-email-wrapper">
-                    <input type="text" placeholder="Enter phone number" name='phoneNumber' onChange={onChange}/>
-                    <input type="text" placeholder="Enter your pincode" name='pincode' onChange={onChange}/>   
+                    <input type="text" placeholder="Enter phone number" name='phoneNumber' onChange={onChange} required/>
+                    <input type="text" placeholder="Enter your pincode" name='pincode' onChange={onChange} required/>   
                 </div>
                 
                 <div className="d-flex name-email-wrapper">
-                    <input type = 'text' placeholder="Enter hotel Address" name='address' onChange={onChange}/>
-                    <input type = 'text' placeholder="Enter fssai license number" name='fassaiid'onChange={onChange}/>   
+                    <input type = 'text' placeholder="Enter hotel Address" name='address' onChange={onChange} required/>
+                    <input type = 'text' placeholder="Enter fssai license number" name='fassaiid'onChange={onChange} required/>   
                 </div>
                     
                 <div className="d-flex name-email-wrapper">
-                    <input type = 'text' placeholder="Create Your Password" name='password' onChange={onChange}/>
-                    <input type = 'text' placeholder="Confirm Password" name='conPassword'/>   
+                    <input type = 'password' placeholder="Create Your Password" name='password' onChange={onChange} required/>
+                    <input type = 'password' placeholder="Confirm Password" name='conPassword' id="conPassword" required/>   
                 </div>
                 <div className='mt-1'>
                        <button className="submit" type="submit">Submit</button>
