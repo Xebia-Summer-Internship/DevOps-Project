@@ -1,0 +1,22 @@
+#Dash {
+    display: flex;
+    background-image: url('img/img7.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 652px;
+    opacity: .9;
+    margin-top: .1px;
+    overflow: hidden;
+}
+
+@media screen and (min-height: 1000px) {
+    #Dash {
+        height: 1173px;
+    }
+}
+
+@media screen and (min-height: 730px) and (max-height: 1000px){
+    #Dash {
+        height: 830px;
+    }
+}
