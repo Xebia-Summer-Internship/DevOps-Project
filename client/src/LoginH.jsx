@@ -21,7 +21,7 @@ function LoginH () {
                     <input type = 'email' placeholder="Enter your email" name='email'  id="email1"></input><br /><br/>
                     <input type = 'password' placeholder="Enter your Password" name='password'  id="password1"></input> <br /> <br />
                     {/*<Link to ="" id="forgot"><b>Forgot Password?</b></Link> <br />*/}
-                    <button type='submit'>Login</button>
+                    <button type='submit' id="button">Login</button>
                     <br></br><br></br>
                     <p id="accountExists1"><b>Don't have an account?</b><Link to ="/SignUpC" id='signInBtn1'><b> Sign Up</b></Link></p>
                 </div>
