@@ -91,15 +91,15 @@ function SignUpC (props) {
         <>
         <Nav />
             <div className='Cont'>
-               <div id = "validationDivision"></div>
                 <div className='Signup'>
+                
                     <div id='forms'>
                             <h1 className='form-heading'>Sign Up</h1> <br />
                         <div className='d-flex button-container'>
                             <div > <Link to='/SignUpC'> <button id ='Customer'>Customer</button> </Link> </div>
                             <div > <Link to='/SignUpH'> <button id ='Hotel'>Hotel</button> </Link>  </div> 
                         </div>
-                        
+                        <div id = "validationDivision"></div>
                         <form className="vip-form" action="" onSubmit={handleOnSubmit}>
                                 <div className="vip-form-inner">
                                     <div className="d-flex name-email-wrapper">
