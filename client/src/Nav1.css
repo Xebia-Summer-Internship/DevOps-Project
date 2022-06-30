@@ -76,7 +76,7 @@
     }
     
     #box {
-      width: 25%;
+      width: 20%;
       /* height: 20px; */
       border: 2px solid #F5F5DC;
       padding: 0px;
@@ -88,3 +88,16 @@
     }
     } 
     
+.Nav-row {
+  display: flex;
+}
+
+.Nav-row #icon {
+    flex: 40%;
+    display: grid;
+    place-items: center;
+}
+
+.Nav-row #name {
+    flex: 60%;
+}
