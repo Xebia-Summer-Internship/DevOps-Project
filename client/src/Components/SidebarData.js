@@ -1,24 +1,30 @@
 import React from 'react'
 import HomeIcon from '@mui/icons-material/Home';
-import EmailIcon from '@mui/icons-material/Email';
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import NearbyIcon from '@mui/icons-material/LocationOn';
+import BookingsIcon from '@mui/icons-material/PlaylistAddCheck';
+import ProfileIcon from '@mui/icons-material/AccountBox';
 import LogoutIcon from '@mui/icons-material/Logout';
 
 export const SidebarData = [
   {
     title: "Home",
     icon:   <HomeIcon />,
-    link:   "/home"
-  },
-  {
-    title: "Mailbox",
-    icon:   <EmailIcon />,
-    link:   "/mailbox"
-  },
-  {
-    title: "Dashboard",
-    icon:   <DashboardIcon />,
     link:   "/dashboard"
+  },
+  {
+    title: "Nearby",
+    icon:   <NearbyIcon />,
+    link:   "/Nearby"
+  },
+  {
+    title: "Bookings",
+    icon:   <BookingsIcon />,
+    link:   "/bookings"
+  },
+  {
+    title: "Profiles",
+    icon:   <ProfileIcon />,
+    link:   "/profile"
   },
   {
     title: "Log out",
