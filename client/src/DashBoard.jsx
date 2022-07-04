@@ -39,21 +39,21 @@ function DashBoard () {
                             <input type="date" name="" id="" />
                         </div>
                     </div>
-                    <div class='w-100'></div>
+                   
                     <div class='col'>
                         <div className='bumtton'>
                             <h3 className='title-bumtton'>Start Time</h3>
                             <input type="time" />
                         </div>
                     </div>
-                    <div class='w-100'></div>
+                    
                     <div class='col'>
                         <div className='bumtton'>
                             <h3 className='title-bumtton'>End time</h3>
                             <input type="time" name="" id="" />
                         </div>
                     </div>
-                    <div class='w-100'></div>
+                  
                     <div class='col'>
                         <div className='bumtton'>
                             <h3 className='title-bumtton'>Enter Party Size</h3>
