@@ -4,6 +4,7 @@ import Login from "./Login";
 import SignUpC from "./SignUpC";
 import SignUpH from "./SignUpH";
 import LoginH from "./LoginH";
+import DashBoard from "./DashBoard";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/LoginH" component={LoginH} />
         <Route exact path="/SignUpC" component={SignUpC} />
         <Route exact path="/SignUpH" component={SignUpH} />
+        <Route exact path="/DashBoard" component={DashBoard} />
       </Switch>
     </>
   );

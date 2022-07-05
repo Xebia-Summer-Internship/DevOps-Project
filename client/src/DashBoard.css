@@ -1,0 +1,153 @@
+#Dash {
+    display: flex;
+    background-image: url('img/img7.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: .9;
+    margin-top: .1px;
+    overflow: hidden;
+}
+
+
+
+.main-dash {
+    width: 80%;
+    background: #FFFFFF;
+    border: 8px solid #dddfe2;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    padding: 1rem;
+    align-items: center;
+    align-self:inherit;
+    max-width:  none !important;
+}
+
+.container-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    max-width:  none !important;
+}
+
+.location-card {
+    border: 1px solid;
+    justify-content: center;
+    text-align: center;
+}
+
+.new-card {
+    background-color: antiquewhite;
+    padding: 1rem;
+    border: 1px solid;
+    justify-content: center;
+    min-width: fit-content;
+    max-width: none !important;
+}
+
+.Sidebar {
+    height: 100vh;
+    width: 200px;
+    background-color: #2F4050;
+}
+
+.SidebarList {
+    height: auto;
+    padding: 0;
+    width: 100%;
+}
+
+.SidebarList .row {
+    width: 100%;
+    height: 60px;
+    
+    list-style-type: none;
+    margin: 0%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.SidebarList .row:hover {
+    cursor: pointer;
+    background-color: #293846;
+}
+
+.SidebarList #active {
+    background-color: #293846;
+}
+
+.row #icon {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+
+.row #title {
+    flex: 70%;
+}
+
+.bumtton {
+    background-color: #726A95;
+    padding: 1rem;
+    justify-content: center;
+    min-width: fit-content;
+    
+    border-radius: 8px;
+}
+
+.row-dash {
+    
+    width: 100%;
+   
+    padding: 2%;
+    white-space: 1%;
+    scrollbar-gutter: 10%;
+    box-sizing: border-box;
+    
+}
+
+.row-dash .col + .col {
+    margin-top: 2rem;
+}
+
+@media (min-width: 992px) {
+    .row-dash {
+        display: flex;
+    
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .row-dash .col + .col {
+        margin-top: 0;
+    }
+}
+
+.title-bumtton {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+
+
+.seats {
+    height:unset;
+    background-color: #A0C1B8;
+    padding: 1rem;
+    border-radius: 8px;
+
+}
+
+.location-bumtton {
+    background-color: #719FB0;
+    padding: 1rem;
+    justify-content: center;
+    min-width: fit-content;
+    
+    border-radius: 8px;
+}

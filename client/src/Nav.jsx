@@ -6,6 +6,7 @@ function Nav () {
         <>
 <div className='Navbar'>
 <br />
+
 <h1 className='Text'> MakeMyReservation</h1>
 </div>
         </>
