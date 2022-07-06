@@ -22,10 +22,8 @@ function LoginH () {
             email: credentials.email,
             password: credentials.password,
         }       
-
-        // console.log(JSON.stringify(awesomeObj));
        
-        var response = await fetch('/api/customerSignIn', {
+        var response = await fetch('/api/hotelSignIn', {
             method: 'POST',
             mode: 'no-cors',
             cache: 'no-cache',
