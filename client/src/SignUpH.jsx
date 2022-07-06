@@ -2,7 +2,6 @@
 import React,{useState} from 'react';
 import './SignUp.css';
 import './SignUpH.css';
-
 import {Redirect} from 'react-router-dom'
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
@@ -52,7 +51,7 @@ function SignUpH (props) {
             $('#validationDivision').append($("<div\"></div>").html("<h4><b></b></h4><span style=\"color:red\">Passwords does not match</span>"));
             clientValidations = false;
         }
-        return clientValidations;
+        return true;
     }
 
     const handleOnSubmit = async (e) => {

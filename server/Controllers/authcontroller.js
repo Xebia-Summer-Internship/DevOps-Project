@@ -61,13 +61,10 @@ const customerSignUp = async (req, res, next) => {
           "Access-Control-Allow-Origin": "*",
         });
         console.log(resObj);
-        // res.send(resObj);
-        res.json({
-          resObj,
-        });
+        res.json(resObj);
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
         res.json({
           message: "An error occured while saving the user!",
         });
