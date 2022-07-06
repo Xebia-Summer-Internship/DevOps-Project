@@ -88,7 +88,7 @@ function SignUpH (props) {
             localStorage.setItem('access-token',json.jwtToken);
             // handle success - redirect to home page
             // Redirect Here
-            <Redirect to="/"/>
+            <Redirect  to="/"/>
         }
         else{
             //alert to show error to be handeled by frontend
@@ -100,7 +100,7 @@ function SignUpH (props) {
         <>
         <Nav />
     <div className='Cont'>
-    <div id = "validationDivision"></div>
+   
     <div className='Signup'>
         <div id='forms'>
                 <h1 className='form-heading'>Sign Up</h1> <br />
@@ -108,6 +108,7 @@ function SignUpH (props) {
                 <div > <Link to='/SignUpC'> <button id ='Customer1'>Customer</button> </Link> </div>
                 <div > <Link to='/SignUpH'> <button id ='Hotel1'>Hotel</button> </Link>  </div> 
             </div>
+            <div id = "validationDivision"></div>
                 <form className='vip-form' action="" onSubmit={handleOnSubmit}>
                 <div className="vip-form-inner">
                     <div className="d-flex name-email-wrapper">

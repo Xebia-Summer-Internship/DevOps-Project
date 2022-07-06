@@ -53,7 +53,7 @@ function Login () {
                 <div className="login">
                     <h1 className='form-heading'>Login</h1> 
                     <div className='button-container'>
-                        <Link to='/'> <button id ='Customer2'>Customer</button> </Link>
+                        <Link to='/DashBoard'> <button id ='Customer2'>Customer</button> </Link>
                         <Link to='/LoginH'> <button id ='Hotel2'>Hotel</button> </Link> 
                     </div> 
                     <br /><br />

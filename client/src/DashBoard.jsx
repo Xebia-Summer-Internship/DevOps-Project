@@ -31,7 +31,7 @@ function DashBoard () {
                     </div>
                 </div>
                 <br /> <br />
-                <div className="location-card">
+            <div className="location-card">
                 <div class='row-dash'>
                     <div class='col'>
                         <div className='bumtton'>
@@ -57,14 +57,14 @@ function DashBoard () {
                     <div class='col'>
                         <div className='bumtton'>
                             <h3 className='title-bumtton'>Enter Party Size</h3>
-                            <input type="dropdown" name="" id="" />
+                            <input type="number" name="" id="" />
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
                 <br />
                 <div className='seats'>
-                    
+                    <b>Search</b>
                 </div>
             </div>
         
