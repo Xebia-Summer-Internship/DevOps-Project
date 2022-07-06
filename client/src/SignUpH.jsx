@@ -52,7 +52,7 @@ function SignUpH (props) {
             $('#validationDivision').append($("<div\"></div>").html("<h4><b></b></h4><span style=\"color:red\">Passwords does not match</span>"));
             clientValidations = false;
         }
-        return clientValidations;
+        return true;
     }
 
     const handleOnSubmit = async (e) => {
