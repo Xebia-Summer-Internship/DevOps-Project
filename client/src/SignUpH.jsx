@@ -2,7 +2,6 @@
 import React,{useState} from 'react';
 import './SignUp.css';
 import './SignUpH.css';
-
 import {Redirect} from 'react-router-dom'
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
