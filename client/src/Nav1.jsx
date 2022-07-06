@@ -10,13 +10,9 @@ function Nav1 () {
 <br />
 
 <h1 className='Text1'> MakeMyReservation</h1>
-    <div id="box">
-        <div class='Nav-row'>
-            <div class='icon'><FaceIcon /> </div>
-            <div class='name'>{a}</div>
+    <div id="box">{a}</div>
         </div>
-        </div>
-        </div>
+    
         </>
     );
 }

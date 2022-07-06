@@ -19,7 +19,12 @@
     padding: 1rem;
     align-items: center;
     align-self:inherit;
+    height: 50%;
     max-width:  none !important;
+    max-height:  none !important;
+    margin-left: 2%;
+    margin-top: 6%;
+    overflow: hidden;
 }
 
 .container-card {
@@ -47,11 +52,25 @@
 }
 
 .Sidebar {
-    height: 100vh;
+    height: 90.3vh;
     width: 200px;
     background-color: #2F4050;
 }
+@media screen and (max-width: 990px) {
 
+    .Sidebar{
+        width: 150px;
+        height: 165vh;
+        
+        }
+        
+.main-dash {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+    }
 .SidebarList {
     height: auto;
     padding: 0;
@@ -136,10 +155,14 @@
 
 
 .seats {
-    height:unset;
+    /* height:unset; */
     background-color: #A0C1B8;
     padding: 1rem;
     border-radius: 8px;
+    width: 20%;
+    margin-left: 38%;
+    text-align: center;
+    
 
 }
 
