@@ -40,12 +40,11 @@ function Login () {
             localStorage.setItem('access-token',json.jwtToken);
             // handle success - redirect to home page
             // Redirect Here
-            <Redirect push to="/Hotels"/>
             history.push("/DashBoard");
-
         }
         else{
             console.log("SIGNIN FAILED");
+            alert("Invalid Email or Password");
             //alert to show error to be handeled by frontend
         }
 
