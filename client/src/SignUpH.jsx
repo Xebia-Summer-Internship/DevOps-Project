@@ -2,14 +2,14 @@
 import React,{useState} from 'react';
 import './SignUp.css';
 import './SignUpH.css';
-import {Redirect} from 'react-router-dom'
 import Nav from './Nav';
-import { Link } from 'react-router-dom';
+import { useHistory , Link } from 'react-router-dom';
 import $ from 'jquery';
 
 function SignUpH (props) {
 
     const [credentials, setCredentials] = useState({name:"",email:"",phoneNumber:"",fassaiid:"",address:"",pincode:"",password:""});
+    let history = useHistory();
 
     const onChange = (e)=>{
         setCredentials({...credentials,[e.target.name]:e.target.value})
@@ -83,11 +83,12 @@ function SignUpH (props) {
 
         console.log("response received: " + JSON.stringify(json));
 
-        if(json.success){            
+        if(json.success){ 
+            console.log("SIGNUP SUCCESSFUL");             
             localStorage.setItem('access-token',json.jwtToken);
             // handle success - redirect to home page
             // Redirect Here
-            <Redirect  to="/"/>
+            history.push("/LoginH");
         }
         else{
             //alert to show error to be handeled by frontend

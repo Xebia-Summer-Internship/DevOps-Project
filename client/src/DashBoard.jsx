@@ -28,7 +28,7 @@ function DashBoard () {
 
         // console.log(JSON.stringify(awesomeObj));
        
-        var response = await fetch('/api/customerSignIn', {
+        var response = await fetch('/api/searchHotels', {
             method: 'POST',
             mode: 'no-cors',
             cache: 'no-cache',
