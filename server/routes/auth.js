@@ -3,6 +3,7 @@ const AuthController = require("../controllers/authController");
 const HotelAuthController = require("../controllers/hotelAuthController");
 const loginCustomerController = require("../controllers/loginCustomerController");
 const loginHotelController = require("../controllers/loginHotelController");
+const searchHotelsController = require("../controllers/searchHotelsController");
 const fetchCustomer = require("../middleware/fetchCustomer");
 const fetchHotel = require("../middleware/fetchHotel");
 
@@ -21,5 +22,8 @@ router.post(
   loginCustomerController.fetchSignedInCustomer
 );
 router.post("/fetchHotel", fetchHotel, loginHotelController.fetchSignedInOwner);
+
+//dashboard route
+router.post("/searchHotels", searchHotelsController.searchHotels);
 
 module.exports = router;
