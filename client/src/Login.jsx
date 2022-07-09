@@ -2,11 +2,11 @@
 import React,{useState} from 'react';
 import Nav from './Nav';
 import './Login.css';
-import { Link, Redirect } from 'react-router-dom';
+import { useHistory , Link } from 'react-router-dom';
 
 function Login () {
     const [credentials, setCredentials] = useState({email:"",password:""});
-
+    let history = useHistory();
     const onChange = (e)=>{
         setCredentials({...credentials,[e.target.name]:e.target.value})
     }
@@ -35,13 +35,15 @@ function Login () {
         
         console.log("response received: " + JSON.stringify(json));
 
-        if(json.success){            
+        if( json.token){  
+            console.log("SIGNIN SUCCESSFUL");          
             localStorage.setItem('access-token',json.jwtToken);
             // handle success - redirect to home page
             // Redirect Here
-            <Redirect push to="/DashBoard"/>
+            history.push("/DashBoard");
         }
         else{
+            console.log("SIGNIN FAILED");
             //alert to show error to be handeled by frontend
         }
 

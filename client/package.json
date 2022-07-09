@@ -2,7 +2,7 @@
   "name": "xebiaintership",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:5000/",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
@@ -19,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.3",
     "react-scripts": "^5.0.1",
+    "react-toastify": "^9.0.5",
     "reactstrap": "^9.1.1",
     "web-vitals": "^2.1.4"
   },
