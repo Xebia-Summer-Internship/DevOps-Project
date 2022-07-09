@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useState} from 'react';
+import { Link, Redirect } from 'react-router-dom';
 import './DashBoard.css';
 import Nav1 from './Nav1';
 import Sidebar from './Components/Sidebar'
@@ -6,6 +7,52 @@ import Sidebar from './Components/Sidebar'
 
 
 function DashBoard () {
+
+    const [credentials, setCredentials] = useState({pincode:"",size:"",date:"",stime:"",etime:""});
+
+    const onChange = (e)=>{
+        setCredentials({...credentials,[e.target.name]:e.target.value})
+    }
+
+    const handleOnSubmit = async (e) => {
+        e.preventDefault()
+        console.log(credentials);
+        
+        var dataObj = {       
+            pincode: credentials.pincode,
+            size: credentials.size,
+            date: credentials.date,
+            stime: credentials.stime,
+            etime: credentials.etime,
+        }       
+
+        // console.log(JSON.stringify(awesomeObj));
+       
+        var response = await fetch('/api/customerSignIn', {
+            method: 'POST',
+            mode: 'no-cors',
+            cache: 'no-cache',
+            accessControlAllowOrigin: 'http://localhost:5000,*',
+            accept: 'application/json',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(dataObj)
+        });
+        var json = await response.json().catch(err => console.log(err));
+        
+        console.log("response received: " + JSON.stringify(json));
+
+        if(json.success){            
+            localStorage.setItem('access-token',json.jwtToken);
+            // handle success - redirect to home page
+            // Redirect Here
+            <Redirect push to="/Hotels"/>
+        }
+        else{
+            //alert to show error to be handeled by frontend
+        }
+
+    }
+
     return (
         <>
         <Nav1 />
@@ -16,17 +63,16 @@ function DashBoard () {
                     <div className='row-dash'>
                         <div class='col'>
                             <div className='location-bumtton'>
-                                <h3 className='title-bumtton'>Enter Address</h3>
-                                <input type="text" name="" id="" />
-                            </div>
-                        </div>
-
-                        <div class='col'>
-                            <div className='location-bumtton'>
                                 <h3 className='title-bumtton'>Enter Pincode</h3>
-                                <input type="number" name="" id="" />
+                                <input type="number" name="pincode" id=""  onChange={onChange} required />
                             </div>
                         </div>
+                        <div class='col'>
+                        <div className='location-bumtton'>
+                            <h3 className='title-bumtton'>Enter Party Size</h3>
+                            <input type="number" name="size" id=""  onChange={onChange} required/>
+                        </div>
+                    </div>
                         
                     </div>
                 </div>
@@ -36,36 +82,30 @@ function DashBoard () {
                     <div class='col'>
                         <div className='bumtton'>
                             <h3 className='title-bumtton'>Enter Date</h3>
-                            <input type="date" name="" id="" />
+                            <input type="date" name="date" id=""  onChange={onChange} required/>
                         </div>
                     </div>
                    
                     <div class='col'>
                         <div className='bumtton'>
                             <h3 className='title-bumtton'>Start Time</h3>
-                            <input type="time" />
+                            <input type="time" name="stime"  onChange={onChange} required/>
                         </div>
                     </div>
                     
                     <div class='col'>
                         <div className='bumtton'>
                             <h3 className='title-bumtton'>End time</h3>
-                            <input type="time" name="" id="" />
+                            <input type="time" name="etime" id=""  onChange={onChange} required/>
                         </div>
                     </div>
-                  
-                    <div class='col'>
-                        <div className='bumtton'>
-                            <h3 className='title-bumtton'>Enter Party Size</h3>
-                            <input type="number" name="" id="" />
-                        </div>
-                    </div>
+               
                 </div>
             </div>
                 <br />
-                <div className='seats'>
-                    <b>Search</b>
-                </div>
+              
+                <button type='submit' data-aos="fade-zoom-in" id="sbutton" onClick={handleOnSubmit}>Search</button>
+                
             </div>
         
         </div>

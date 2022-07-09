@@ -5,6 +5,7 @@ import SignUpC from "./SignUpC";
 import SignUpH from "./SignUpH";
 import LoginH from "./LoginH";
 import DashBoard from "./DashBoard";
+import Hotels from "./Hotels";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/SignUpC" component={SignUpC} />
         <Route exact path="/SignUpH" component={SignUpH} />
         <Route exact path="/DashBoard" component={DashBoard} />
+        <Route exact path="/Hotels" component={Hotels} />
       </Switch>
     </>
   );

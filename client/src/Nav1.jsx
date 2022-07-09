@@ -1,6 +1,6 @@
 import React from 'react';
 import './Nav1.css';
-import FaceIcon from '@mui/icons-material/Face';
+
 
 function Nav1 () {
     var a="Kartikeya";

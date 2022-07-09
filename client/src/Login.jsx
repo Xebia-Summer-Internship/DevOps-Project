@@ -39,7 +39,7 @@ function Login () {
             localStorage.setItem('access-token',json.jwtToken);
             // handle success - redirect to home page
             // Redirect Here
-            <Redirect push to="/DashBoard"/>
+            <Redirect push to="/Hotels"/>
         }
         else{
             //alert to show error to be handeled by frontend
