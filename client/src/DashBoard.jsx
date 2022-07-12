@@ -4,8 +4,6 @@ import './DashBoard.css';
 import Nav1 from './Nav1';
 import Sidebar from './Components/Sidebar'
 
-
-
 function DashBoard () {
 
     const [credentials, setCredentials] = useState({pincode:"",size:"",date:"",stime:"",etime:""});
