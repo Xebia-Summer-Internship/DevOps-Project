@@ -4,6 +4,8 @@ const HotelAuthController = require("../controllers/hotelAuthController");
 const loginCustomerController = require("../controllers/loginCustomerController");
 const loginHotelController = require("../controllers/loginHotelController");
 const searchHotelsController = require("../controllers/searchHotelsController");
+const completeDetailsController = require("../controllers/completeDetailsController");
+
 const fetchCustomer = require("../middleware/fetchCustomer");
 const fetchHotel = require("../middleware/fetchHotel");
 
@@ -22,6 +24,9 @@ router.post(
   loginCustomerController.fetchSignedInCustomer
 );
 router.post("/fetchHotel", fetchHotel, loginHotelController.fetchSignedInOwner);
+
+//update or complete details for hotel
+router.patch("/completeDetails", completeDetailsController.completeDetails);
 
 //dashboard route
 router.post("/searchHotels", searchHotelsController.searchHotels);
