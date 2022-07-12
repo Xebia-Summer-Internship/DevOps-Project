@@ -2,8 +2,8 @@ import React from 'react';
 import './Nav1.css';
 
 
-function Nav1 (props) {
-    var userName = "Anshuman"
+function Nav1 () {
+    var userName = "Kartikey"
     return (
         <>
             <div className='Navbar1'>

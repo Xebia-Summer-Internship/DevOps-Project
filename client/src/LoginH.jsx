@@ -2,14 +2,14 @@
 import React,{useState} from 'react';
 import Nav from './Nav';
 import './Login.css';
-import { Link } from 'react-router-dom';
 import './LoginH.css'
+import { useHistory , Link } from 'react-router-dom';
 
 
 function LoginH () {
 
     const [credentials, setCredentials] = useState({email:"",password:""});
-
+    let history = useHistory();
     const onChange = (e)=>{
         setCredentials({...credentials,[e.target.name]:e.target.value})
     }
@@ -36,13 +36,22 @@ function LoginH () {
         
         console.log("response received: " + JSON.stringify(json));
 
-        if(json.success){            
+        if(json.token){   
+            // console.log("Name: " + json.user.name);
+            console.log("SIGNIN SUCCESS");         
             localStorage.setItem('access-token',json.jwtToken);
+            history.push(
+            { pathname: "/DashBoardH" , 
+                json: json  
+            }); 
+
             // handle success - redirect to home page
             // Redirect Here
         }
         else{
             //alert to show error to be handeled by frontend
+            console.log("SIGNIN FAILED");
+            alert("Invalid Email or Password");
         }
 
     }

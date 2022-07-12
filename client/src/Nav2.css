@@ -1,0 +1,103 @@
+.Navbar2{
+    background-color: black;
+    margin-top: -2%;
+    height: 100px;
+    color: #F5F5DC;
+    opacity: .9;
+    display: flex;
+    }
+    
+    
+    .Text1 {
+        text-align: left;
+        margin-left: 2%;
+        margin-top: 50px;
+        
+    }
+    
+    #box {
+      width: 10%;
+      border: 2px solid #F5F5DC;
+      padding: 5px;
+      margin-top: 55px;
+      position: absolute;
+      right: 2%;
+      color: black;
+      text-align: center;
+      background-color: white;
+      font-weight: bold;
+     
+    
+    }
+
+      @media screen and (max-width: 550px) {
+
+        .Navbar1{
+           
+            height: 80px;
+            
+            }
+       
+    .Text1 {
+        text-align: left;
+        margin-left: 1%;
+        margin-top: 40px;
+        font-size: 25px;
+        
+    }
+    
+    #box {
+      width: 20%;
+      border: 2px solid #F5F5DC;
+      padding: 5px;
+      margin-top: 38px;
+      position: absolute;
+      right: 1%;
+     
+      
+    
+    }
+    } 
+    
+    @media screen and (max-width: 330px) {
+
+        .Navbar1{
+           
+            height: 70px;
+            
+            }
+       
+    .Text1 {
+        text-align: left;
+        margin-left: 1%;
+        margin-top: 40px;
+        font-size: 18px;
+        
+    }
+    
+    #box {
+      width: 20%;
+      /* height: 20px; */
+      border: 2px solid #F5F5DC;
+      padding: 0px;
+      margin-top: 38px;
+      position: absolute;
+      right: 1%;
+      
+    
+    }
+    } 
+    
+/* .Nav-row {
+  display: flex;
+}
+
+.Nav-row #icon {
+    flex: 40%;
+    display: grid;
+    place-items: center;
+}
+
+.Nav-row #name {
+    flex: 60%;
+} */
