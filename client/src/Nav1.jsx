@@ -3,10 +3,7 @@ import './Nav1.css';
 
 
 function Nav1 () {
-    // var userName = "Kartikey"
-    var json = JSON.parse(sessionStorage.getItem('usr_data'));
-    var userName = json.user.name;
-    console.log(json);
+    var userName = "Welcome, Animesh!"
     return (
         <>
             <div className='Navbar1'>
