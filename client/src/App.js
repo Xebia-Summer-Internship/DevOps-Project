@@ -7,6 +7,7 @@ import LoginH from "./LoginH";
 import DashBoard from "./DashBoard";
 import DashBoardH from "./DashBoardH";
 import Hotels from "./Hotels";
+import ShowHotels from "./ShowHotels";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/DashBoard" component={DashBoard} />
         <Route exact path="/Hotels" component={Hotels} />
         <Route exact path="/DashBoardH" component={DashBoardH} />
+        <Route exact path="/ShowHotels" component={ShowHotels} />
       </Switch>
     </>
   );
