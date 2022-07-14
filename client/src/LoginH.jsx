@@ -40,10 +40,8 @@ function LoginH () {
             // console.log("Name: " + json.user.name);
             console.log("SIGNIN SUCCESS");         
             localStorage.setItem('access-token',json.jwtToken);
-            history.push(
-            { pathname: "/DashBoardH" , 
-                json: json  
-            }); 
+            sessionStorage.setItem('hotel_data',JSON.stringify(json));
+            history.push("/DashBoardH"); 
 
             // handle success - redirect to home page
             // Redirect Here

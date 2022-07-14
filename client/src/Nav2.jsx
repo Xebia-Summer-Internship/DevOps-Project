@@ -4,7 +4,7 @@ import React,{useState} from 'react';
 import './LoginH.css';
 
 function Nav2 () {
-    var a = "HOTEL NAME"
+    var a = JSON.parse(sessionStorage.getItem("hotel-data")).user.name;
     return (
         <>
 <div className='Navbar2'>
