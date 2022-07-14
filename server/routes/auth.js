@@ -5,9 +5,10 @@ const loginCustomerController = require("../controllers/loginCustomerController"
 const loginHotelController = require("../controllers/loginHotelController");
 const searchHotelsController = require("../controllers/searchHotelsController");
 const completeDetailsController = require("../controllers/completeDetailsController");
-
+const hotelDashBoardController  = require("../Controllers/hotelDashBoardController");
 const fetchCustomer = require("../middleware/fetchCustomer");
 const fetchHotel = require("../middleware/fetchHotel");
+
 
 router.get("/test", AuthController.testFun);
 
@@ -30,5 +31,6 @@ router.patch("/completeDetails", completeDetailsController.completeDetails);
 
 //dashboard route
 router.post("/searchHotels", searchHotelsController.searchHotels);
+router.get("/hotelDashBoard/:id", hotelDashBoardController.hotelDashBoard);
 
 module.exports = router;
