@@ -3,7 +3,7 @@ import './Nav1.css';
 
 
 function Nav1 () {
-    var userName = "Kartikey"
+    var userName = "Welcome, Animesh!"
     return (
         <>
             <div className='Navbar1'>
