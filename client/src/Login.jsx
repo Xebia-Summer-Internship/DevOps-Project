@@ -38,6 +38,7 @@ function Login () {
         if( json.token){  
             console.log("SIGNIN SUCCESSFUL");          
             localStorage.setItem('access-token',json.jwtToken);
+            sessionStorage.setItem('usr_data',JSON.stringify(json));
             // handle success - redirect to home page
             // Redirect Here
             history.push("/DashBoard");
