@@ -4,7 +4,7 @@ import React,{useState} from 'react';
 import './LoginH.css';
 
 function Nav2 () {
-    var a = "HOTEL NAME"
+    var a = "Hotel Owner Name"
     return (
         <>
 <div className='Navbar2'>
