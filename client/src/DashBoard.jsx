@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './DashBoard.css';
 import Nav1 from './Nav1';
 import Sidebar from './Components/Sidebar'
@@ -7,7 +7,7 @@ import Sidebar from './Components/Sidebar'
 function DashBoard () {
 
     const [credentials, setCredentials] = useState({pincode:"",size:"",date:"",stime:"",etime:""});
-
+    let history = useHistory();
     const onChange = (e)=>{
         setCredentials({...credentials,[e.target.name]:e.target.value})
     }
@@ -38,15 +38,18 @@ function DashBoard () {
         var json = await response.json().catch(err => console.log(err));
         
         console.log("response received: " + JSON.stringify(json));
-
-        if(json.success){            
+        console.log("data obj: " + dataObj.pincode);
+        if(credentials.pincode!=0 && credentials.size!=0 && credentials.date!=0 && credentials.stime != 0 && credentials.etime != 0){            
             localStorage.setItem('access-token',json.jwtToken);
             // handle success - redirect to home page
             // Redirect Here
-            <Redirect push to="/Hotels"/>
+            console.log("SUCESS");
+            history.push("/ShowHotels");
         }
         else{
+            console.log("FAILED");
             //alert to show error to be handeled by frontend
+            alert("Enter Full Details");
         }
 
     }

@@ -1,6 +1,6 @@
-#Dash {
+#DashQ {
     display: flex;
-    background-image: url('img/img7.jpg');
+    background-image: url('img/img12.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     opacity: .9;
@@ -11,7 +11,7 @@
 
 
 
-.main-dash {
+.main-dashQ {
     width: 80%;
     background: #FFFFFF;
     border: 8px solid #dddfe2;
@@ -38,7 +38,7 @@
     max-width:  none !important;
 }
 
-.location-card {
+.location-cardQ {
     border: 1px solid;
     justify-content: center;
     text-align: center;
@@ -53,7 +53,7 @@
     max-width: none !important;
 }
 
-.Sidebar {
+.SidebarQ {
     height: auto;
     width: 200px;
     background-color: #2F4050;
@@ -106,7 +106,7 @@
     border-radius: 8px;
 }
 
-.row-dash {
+.row-dashQ {
     width: 100%;
     padding: 2%;
     white-space: 1%;
@@ -116,12 +116,12 @@
     flex-direction: column;
 }
 
-.row-dash .col + .col {
+.row-dashQ .col + .col {
     margin-top: 2rem;
 }
 
 @media (min-width: 992px) {
-    .row-dash {
+    .row-dashQ {
         display: flex;
     
         justify-content: center;
@@ -129,12 +129,12 @@
         gap: 2rem;
     }
 
-    .row-dash .col + .col {
+    .row-dashQ .col + .col {
         margin-top: 0;
     }
 }
 
-.title-bumtton {
+.title-bumttonQ {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
@@ -161,7 +161,7 @@
         width: 150px;
         height: 136vh;    
     }    
-    .main-dash {
+    .main-dashQ {
         margin-top: 2%;
         margin-bottom: 2%;
         margin-left: 1%;
@@ -173,7 +173,7 @@
     }
 }
 
-.location-bumtton {
+.location-bumttonQ {
     background-color: #719FB0;
     padding: 1rem;
     justify-content: center;

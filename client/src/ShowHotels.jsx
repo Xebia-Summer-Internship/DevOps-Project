@@ -53,11 +53,11 @@ function ShowHotels () {
     return (
         <>
         <Nav1 />
-        <div id='Dash'>
+        <div id='DashQ'>
             <Sidebar />
-            <div className="main-dash">
-                <div className="location-card">
-                    <div className='row-dash'>
+            <div className="main-dashQ">
+                <div className="location-cardQ">
+                    <div className='row-dashQ'>
                         <h3>HotelName</h3>
                         <h3>Address</h3>
                         <h3>Pincode</h3>
@@ -66,8 +66,8 @@ function ShowHotels () {
                     </div>
                 </div>
                 <br /> 
-                <div className="location-card">
-                    <div className='row-dash'>
+                <div className="location-cardQ">
+                    <div className='row-dashQ'>
                         <h3>HotelName</h3>
                         <h3>Address</h3>
                         <h3>Pincode</h3>
@@ -76,8 +76,8 @@ function ShowHotels () {
                     </div>
                 </div>
                 <br /> 
-                <div className="location-card">
-                    <div className='row-dash'>
+                <div className="location-cardQ">
+                    <div className='row-dashQ'>
                         <h3>HotelName</h3>
                         <h3>Address</h3>
                         <h3>Pincode</h3>
@@ -86,8 +86,8 @@ function ShowHotels () {
                     </div>
                 </div>
                 <br /> 
-                <div className="location-card">
-                    <div className='row-dash'>
+                <div className="location-cardQ">
+                    <div className='row-dashQ'>
                         <h3>HotelName</h3>
                         <h3>Address</h3>
                         <h3>Pincode</h3>
