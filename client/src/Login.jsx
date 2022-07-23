@@ -55,7 +55,7 @@ function Login () {
             <Nav />
             <div className='Main'>
                 <div className="login">
-                    <h1 className='form-heading'>Please Login</h1> 
+                    <h1 className='form-heading'>Login</h1> 
                     <div className='button-container'>
                         <Link to='/DashBoard'> <button id ='Customer2'>Customer</button> </Link>
                         <Link to='/LoginH'> <button id ='Hotel2'>Hotel</button> </Link> 
